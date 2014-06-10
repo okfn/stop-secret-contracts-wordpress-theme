@@ -378,6 +378,9 @@ blockquote {
 #main article {
   border-bottom-color: #2c3136;
 }
+.page #main article {
+  border: none;
+}
 .page-header {
   border: none;
 }
