@@ -135,8 +135,18 @@ a.no-border:focus,
 a.no-border:active,
 a.no-border:hover,
 a.no-border:focus,
-a.no-border:active {
-  border: none;
+a.no-border:active,
+h1 a:link,
+h1 a:visited,
+h1 a:hover,
+h1 a:focus,
+h1 a:active,
+h2 a:link,
+h3 a:visited,
+h4 a:hover,
+h5 a:focus,
+h6 a:active {
+  border: none !important;
 }
 input[type="text"],
 input[type="email"],
@@ -364,6 +374,12 @@ blockquote {
   .footer i {
     font-size: 32px;
   }
+}
+#main article {
+  border-bottom-color: #2c3136;
+}
+.page-header {
+  border: none;
 }
 .content img {
   max-width: 100%;
