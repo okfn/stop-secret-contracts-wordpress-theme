@@ -11,6 +11,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title><?php wp_title( '|', true, 'right' ); ?></title>	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Every year millions of dollars of public money are lost to fraud, corruption and lining the pockets of giant corporations who fail to deliver on their contracts. It's time to put a stop to Secret Contracts! Join the call for transparency and open government contracting.">
+    <meta property="og:title" content="Stop Secret Contracts" />
+    <meta property="og:description" content="Every year millions of dollars of public money are lost to fraud, corruption and lining the pockets of giant corporations who fail to deliver on their contracts. It's time to put a stop to Secret Contracts! Join the call for transparency and open government contracting." />
+    <meta property="og:image" content="<?php echo home_url( '/' ); ?>wp-content/themes/secret-contracts/images/promo.png">
 				
 		<!-- media-queries.js (fallback) -->
 		<!--[if lt IE 9]>
