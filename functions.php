@@ -256,7 +256,7 @@ function add_homepage_meta_box() {
 	if ( $template_file == 'page-homepage.php' ){
 	    add_meta_box(  
 	        'homepage_meta_box', // $id  
-	        'Optional Homepage Tagline', // $title  
+	        'Form Text', // $title  
 	        'show_homepage_meta_box', // $callback  
 	        'page', // $page  
 	        'normal', // $context  
@@ -270,11 +270,23 @@ add_action( 'add_meta_boxes', 'add_homepage_meta_box' );
 $prefix = 'custom_';  
 $custom_meta_fields = array(  
     array(  
-        'label'=> 'Homepage tagline area',  
-        'desc'  => 'Displayed underneath page title. Only used on homepage template. HTML can be used.',  
+        'label'=> 'Heading',  
+        'desc'  => 'Displayed at top of form',  
         'id'    => $prefix.'tagline',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Intro',  
+        'desc'  => 'Displayed below the heading. HTML can be used.',  
+        'id'    => $prefix.'text',  
         'type'  => 'textarea' 
-    )  
+    ),
+    array(  
+        'label'=> 'Footnote',  
+        'desc'  => 'Displayed below form. HTML can be used.',  
+        'id'    => $prefix.'foot',  
+        'type'  => 'textarea' 
+    ) 
 );  
 
 // The Homepage Meta Box Callback  

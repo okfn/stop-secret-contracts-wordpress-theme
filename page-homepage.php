@@ -26,10 +26,15 @@ Template Name: Homepage
 					<?php endif; ?>
           
         </div>
+        <?
+          $form_heading = get_post_meta($post->ID, 'custom_tagline' , true);
+          $form_intro = get_post_meta($post->ID, 'custom_text' , true);
+          $form_footer = get_post_meta($post->ID, 'custom_foot' , true);
+        ?>
         <div class="col-md-5">
           <div class="form white-box" id="sign">
-            <h2>Tell world leaders to stop secret contracts now.</h2>
-            <p>We call for open information about public sector contracts, to strengthen public scrutiny, to empower citizens and to create fully accountable societies.</p>
+            <h2><?php echo $form_heading ;?></h2>
+            <?php echo $form_intro;?>
             <form action="https://sendy.okfn.org/subscribe" method="POST" accept-charset="utf-8">
               <fieldset class="left">
                 <label for="name" class="sr-only">Name</label>
@@ -42,6 +47,9 @@ Template Name: Homepage
               <input type="hidden" name="list" value="IVZ8ORGT8lkDGtPP892wzLzw"/>
               <input type="submit" name="submit" id="submit" value="Sign"/>
             </form>
+            <? if ($form_footer) { ?>
+            <small class="footnote"><?php echo $form_footer ;?></small>
+            <? } ?>
           </div>
 
         </div>

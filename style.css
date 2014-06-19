@@ -352,6 +352,10 @@ blockquote {
 .form label {
   font-size: 13px;
 }
+.form .footnote {
+  margin-top: 15px;
+  display: block;
+}
 .social {
   display: table;
 }
