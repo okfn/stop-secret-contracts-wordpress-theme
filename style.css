@@ -427,24 +427,24 @@ blockquote {
   margin-top: 15px;
   display: block;
 }
-.home .grey > section {
+.page-template-page-homepage-php .grey > section {
   border-top: solid 1px rgba(44, 49, 54, 0.1);
   margin-top: 40px;
   padding-top: 40px;
 }
-.home .grey form {
+.page-template-page-homepage-php .grey form {
   padding-top: 20px;
 }
-.home .grey form .submit label {
+.page-template-page-homepage-php .grey form .submit label {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .home .grey form .submit label {
+  .page-template-page-homepage-php .grey form .submit label {
     display: block;
     visibility: hidden;
   }
 }
-.home .grey form .submit #submit {
+.page-template-page-homepage-php .grey form .submit #submit {
   width: 100%;
 }
 .social {
