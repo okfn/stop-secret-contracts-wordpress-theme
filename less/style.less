@@ -1,8 +1,8 @@
 /*
 Theme Name: Stop Secret Contracts
 Theme URI: https://github.com/okfn/stop-secret-contracts-wordpress-theme
-Description: A simple responsive theme based on the Bootstrap framework. Includes multiple page templates, two different sidebars and a theme options panel.
-Version: 0.1
+Description: Theme for stopsecretcontracts.org, based on the Bootstrap framework. Includes multiple page templates.
+Version: 1.0
 Author: Sam Smith
 Author URI: http://www.mintcanary.com/
 Tags: open knowledge
@@ -11,26 +11,29 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html http://www.apache.org/lice
 */
 
 @import url(http://fonts.googleapis.com/css?family=Bevan);
-@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700);
 
 
-@lightblue: #d8eaed;
+@lightblue: #95c5cd;
 @darkblue: #2c3136;
 @green: #267f5d;
 @white: #FFF;
 @black: #000;
 @twitter: #3399DD;
+@light: #f7f7f7;
+@grey: #e0e1e2;
 
+@bodyfont: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 @headingfont: Bevan, "Rockwell Extra Bold", "Rockwell Bold", monospace;
 
 .headingfont(@text-transform: uppercase) {
-	font-family: Bevan, "Rockwell Extra Bold", "Rockwell Bold", monospace;
+	font-family: @headingfont;
 	text-transform:@text-transform;
 	font-weight:400;
 }
 
 .bodyfont {
-	font-family:'Pontano Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:@bodyfont;
 	font-weight:400;
 }
 
@@ -110,8 +113,8 @@ html {
 } 
  
 body {
-  .font-size(); /* Uses the default font-size of 16 */
-	.line-height(); /* Uses our line height of 22, divided by the font size of 16 */
+  .font-size(18);
+  line-height:1.5;
 	.bodyfont;
   background-color:transparent;
   color: @white;
@@ -150,26 +153,41 @@ p, h1, h2, h3, h4, h5, h6 {
 	margin-top:0;
 	margin-bottom:0.3em;
 }
-h1, h2, h3, h4, h5, h6, .heading {
+h1, h2, h3 {
 	.headingfont;
 }
 h1 {
 	.font-size(24);
 }
 h2 {
-	.font-size(22);
+	.font-size(32);
 }
 h3 {
 	padding-top:20px;
-	.font-size(20);
+	.font-size(28);
+}
+h4 {
+  .font-size(24);
+  text-transform:uppercase;
+  font-family:@bodyfont;
+  font-weight:700;
+}
+h5 {
+  .font-size(20);
+  text-transform:uppercase;
+  font-family:@bodyfont;
+  font-weight:700;
 }
 h6 {
   margin-top:8px;
+  text-transform:uppercase;
+  font-family:@bodyfont;
+  font-weight:700;
 }
 
 p, ul {
 	margin-bottom:0;
-	padding-bottom:0.7em;
+	padding-bottom:1.5em;
 }
 
 a:link,
@@ -177,35 +195,8 @@ a:visited,
 a:hover,
 a:focus, 
 a:active {
-	color: @white;
+	color: @green;
 	text-decoration:none;
-	border-bottom: dotted 1px @white;
-}
-a:hover,
-a:focus, 
-a:active {
-	border-bottom-style:solid;	
-}
-
-a.no-border:link,
-a.no-border:visited,
-a.no-border:hover,
-a.no-border:focus, 
-a.no-border:active,
-a.no-border:hover,
-a.no-border:focus, 
-a.no-border:active,
-h1 a:link,
-h1 a:visited,
-h1 a:hover,
-h1 a:focus, 
-h1 a:active,
-h2 a:link,
-h3 a:visited,
-h4 a:hover,
-h5 a:focus, 
-h6 a:active {
-	border:none !important;	
 }
 
 
@@ -238,14 +229,27 @@ input[type="submit"] {
 	color:@white;
 	padding:10px 30px;
 	text-transform:uppercase;
+  border-radius:0;
 }
 .btn:link,
 .btn:visited,
 .btn:hover,
 .btn:focus, 
 .btn:active {
-	border:none;
+	color:@white;
 }
+
+
+.btn-lg {
+  border-right:solid 3px darken(@darkblue, 50%);
+  border-bottom:solid 3px darken(@darkblue, 50%);
+    @media screen and (min-width: 768px) {
+    .font-size(23);
+    padding-top:15px;
+    padding-bottom:15px;
+  }
+}
+
 
 blockquote {
   border-color:@darkblue;
@@ -257,26 +261,70 @@ blockquote {
    ========================================================================== */
 
 .light {
-  background-color:@lightblue;
+  background-color:@light;
   color: @darkblue;
   position:relative;
   z-index:0;
-  padding-bottom:20px;
-  a,
-  a:link,
-  a:visited,
-  a:hover,
-  a:focus, 
-  a:active {
-    color: @darkblue;
-    text-decoration:none;
-    border-bottom: dotted 1px @darkblue;
-  }
+}
+
+.grey {
+  background-color:@grey;
+  padding-top:50px;
+  padding-bottom:50px;
+  margin-top:30px;
 }
 
 .navbar {
-  margin-top:25px;
-  margin-bottom:25px;
+  background-color:@darkblue;
+  border-radius:0;
+  margin-bottom:95px;
+  
+  & + .banner {
+    margin-top:-95px;
+    background-color:@lightblue;
+    background-image:url(images/money.png);
+    background-position:center bottom;
+    background-repeat:no-repeat;
+    color:@white;
+    text-align:center;
+    padding-top:70px;
+    padding-bottom:30px;
+    text-shadow: 1px 1px 0px fade(@darkblue, 40%);
+    margin-bottom:50px;
+    
+    @media screen and (min-width: 768px) {
+      padding-top:120px;
+      padding-bottom:70px;
+    }
+    
+    h2 {
+      .bodyfont;
+      text-transform:none;
+      
+      @media screen and (min-width: 768px) {
+        .font-size(33);
+      }
+      strong {
+        display:block;
+        .headingfont;
+        text-decoration:none;
+        margin-top:10px;
+        
+        @media screen and (min-width: 768px) {
+          .font-size(46);
+        }
+      }
+    }
+    
+    .btn {
+      margin-top:20px;
+      
+      @media screen and (min-width: 768px) {
+        margin-top:50px;
+        min-width:310px;
+      }
+    }
+  }
 }
 .navbar > .container {
   a,
@@ -286,42 +334,76 @@ blockquote {
   a:focus, 
   a:active {
     border:none;
+    color:@white;
   }
   a:hover,
   a:focus {
     background-color:fade(@white, 95%);
   }
   .navbar-brand {
-    width:125px;
-    height:88px;
+    width:128px;
+    height:143px;
     background-image:url(images/logo.png);
-    background-size:auto 88px;
     text-indent:-9999px;
     overflow:hidden;
-    margin-left:-16px;
+    position:absolute;
+    left:50%;
+    top:-30px;
+    margin-left:-64px;
+    z-index:1;
+    
+    .svg & {
+      background-image:url(images/logo.svg);
+    }
+    
+    @media screen and (min-width: 768px) {
+      top:-1px;
+    }
   }
+  
   a.navbar-brand:hover,
   a.navbar-brand:focus {
     background-color:transparent;
   }
+  
+  .navbar-nav {
+    padding-bottom:0;
+    max-width:50%;
+    .font-size(15);
+    
+    &.navbar-right {
+      margin-right: -20px;
+      
+      & > li {
+        @media screen and (min-width: 768px) {
+          float: right;
+        }
+        
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      
+      a:hover,
+      .navbar > .container a:focus {
+        background-color: lighten(@darkblue, 10%);
+      }
+    }
+    
+    @media screen and (min-width: 768px) {
+      max-height:50px;
+      overflow:hidden;
+    }
+  }
+  
   li {
-    float:none;
-    text-align:right;
     text-transform:uppercase;
   }
   .navbar-toggle .icon-bar {
-    background-color: @darkblue;
+    background-color: @white;
   }
 }
-@media screen and (min-width: 768px) {
-  .navbar > .container .navbar-brand {
-    margin-left:-40px;
-  }
-  .navbar-nav > li > a {
-    padding-top:3px;
-    padding-bottom:3px;
-  }
-}
+
 
 
 .white-box {
@@ -429,6 +511,33 @@ blockquote {
   display:block;
 }
 
+.home {
+  .grey {
+    & > section {
+      border-top: solid 1px fade(@darkblue, 10%);
+      margin-top:40px;
+      padding-top:40px;
+    }
+    
+    form {
+      padding-top:20px;
+      .submit {
+        label {
+          display:none;
+          
+          @media screen and (min-width: 768px) {
+            display:block;
+            visibility:hidden;
+          }
+        }
+        #submit {
+          width:100%;
+        }
+      }
+    }
+  }
+}
+
 .social {
   display:table;
   span {
@@ -476,32 +585,46 @@ blockquote {
 .footer {
   position:relative;
   z-index:0;
-  padding-top:20px;
+  padding-top:40px;
   padding-bottom:20px;
+  .font-size(14);
   a:link,
   a:visited,
   a:hover,
   a:focus, 
   a:active {
-    border:none;
+    color:@white;
   }
-  .widget {
-    margin-top:10px;
-    margin-bottom:0;
-    float:left;
-    display:table;
-    > * {
-      display:table-cell;
-      vertical-align:middle;
+  .footer-top {
+  }
+  .footer-bottom {
+    .widget {
+      margin-top:10px;
+      margin-bottom:0;
+      float:left;
+      display:table;
+      > * {
+        display:table-cell;
+        vertical-align:middle;
+      }
+      h4 {
+        .bodyfont;
+        text-transform:none;
+        .font-size();
+        padding-right:10px;
+      }
+      i {
+        margin-right:10px;
+      }
     }
-    h4 {
-      .bodyfont;
-      text-transform:none;
-      .font-size();
-      padding-right:10px;
-    }
-    i {
-      margin-right:10px;
+    
+    .col-md-5 {
+      .widget {
+        @media screen and (min-width: 768px) {
+          float:right;
+          margin-left:15px;
+        }
+      }
     }
   }
 }
@@ -514,25 +637,6 @@ blockquote {
 }
 .footer .okf-footer .container ul {
 	padding:0;
-}
-
-.home .light:after,
-.home .footer:after {
-  content:'';
-  width:364px;
-  height:178px;
-  background-image:url(images/money.png);
-  background-size:610px auto;
-  position:absolute;
-  bottom:0;
-  right:0;
-  z-index:-1;
-}
-.home .footer:after {
-  height:149px;
-  background-position:left -178px;
-  bottom:auto;
-  top:0;
 }
 
 

@@ -256,7 +256,7 @@ function add_homepage_meta_box() {
 	if ( $template_file == 'page-homepage.php' ){
 	    add_meta_box(  
 	        'homepage_meta_box', // $id  
-	        'Form Text', // $title  
+	        'Home Text', // $title  
 	        'show_homepage_meta_box', // $callback  
 	        'page', // $page  
 	        'normal', // $context  
@@ -270,21 +270,81 @@ add_action( 'add_meta_boxes', 'add_homepage_meta_box' );
 $prefix = 'custom_';  
 $custom_meta_fields = array(  
     array(  
-        'label'=> 'Heading',  
-        'desc'  => 'Displayed at top of form',  
-        'id'    => $prefix.'tagline',  
-        'type'  => 'text' 
-    ),
-    array(  
-        'label'=> 'Intro',  
-        'desc'  => 'Displayed below the heading. HTML can be used.',  
-        'id'    => $prefix.'text',  
+        'label'=> 'Banner Text',  
+        'desc'  => '',  
+        'id'    => $prefix.'bannertext',  
         'type'  => 'textarea' 
     ),
     array(  
-        'label'=> 'Footnote',  
-        'desc'  => 'Displayed below form. HTML can be used.',  
-        'id'    => $prefix.'foot',  
+        'label'=> 'Banner Button 1 Text',  
+        'desc'  => 'First call to action button',  
+        'id'    => $prefix.'bannerbutton1text',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Banner Button 1 ID',  
+        'desc'  => 'Section to link to',  
+        'id'    => $prefix.'bannerbutton1id',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Banner Button 2 Text',  
+        'desc'  => 'Second call to action button',  
+        'id'    => $prefix.'bannerbutton2text',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Banner Button 2 ID',  
+        'desc'  => 'Section to link to',  
+        'id'    => $prefix.'bannerbutton2id',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Action 1 Heading',
+        'desc'  => 'Action 1 ID = "campaigns"', 
+        'id'    => $prefix.'action1heading',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Action 2 Heading', 
+        'id'    => $prefix.'action2heading',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Action 2 Text', 
+        'id'    => $prefix.'action2text',  
+        'type'  => 'textarea' 
+    ),
+    array(  
+        'label'=> 'Action 2 ID', 
+        'id'    => $prefix.'action2id',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Action 3 Heading', 
+        'id'    => $prefix.'action3heading',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Action 3 Text', 
+        'id'    => $prefix.'action3text',  
+        'type'  => 'textarea' 
+    ),
+    array(  
+        'label'=> 'Action 3 ID', 
+        'id'    => $prefix.'action3id',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Action 4 Heading',
+        'desc'  => 'Action 4 ID = "newsletter"', 
+        'id'    => $prefix.'action4heading',  
+        'type'  => 'text' 
+    ),
+    array(  
+        'label'=> 'Action 4 Footnote',  
+        'desc'  => 'Displayed below form.',  
+        'id'    => $prefix.'action4text',  
         'type'  => 'textarea' 
     ) 
 );  

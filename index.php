@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-			
+	 <div class="container">		
 			<div id="content" class="clearfix row">
 			
 				<div id="main" class="col-sm-12 clearfix" role="main">
@@ -65,5 +65,5 @@
 				<?php //get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
-
+  </div>
 <?php get_footer(); ?>

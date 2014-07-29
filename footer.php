@@ -1,16 +1,20 @@
-      </div>
+
     </div>
     
     <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-md-7">
+        <div class="row footer-top">
+          <div class="col-sm-12">
             <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer1') ) : ?>
 		        <?php endif; ?>
           </div>
-          <div class="col-md-5">
+        </div>
+        <div class="row footer-bottom">
+          <div class="col-md-7">
             <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer2') ) : ?>
 		        <?php endif; ?>
+          </div>
+          <div class="col-md-5">
             <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('footer3') ) : ?>
 		        <?php endif; ?>
           </div>

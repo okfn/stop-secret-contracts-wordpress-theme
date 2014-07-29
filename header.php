@@ -39,9 +39,8 @@
 	<body <?php body_class(); ?>>
 				
 		<div class="light">
-      <div class="container">
-      
-        <nav class="navbar" role="navigation">
+    
+      <nav class="navbar" role="navigation">
           <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -51,7 +50,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>">Stop Secret Contracts</a>
+              <a class="navbar-brand" href="<?php echo home_url( '/' ); ?>"><h1>Stop Secret Contracts</h1></a>
             </div>
 
 					<div class="collapse navbar-collapse navbar-responsive-collapse">
@@ -68,3 +67,6 @@
 
 				</div><!-- /.container-fluid -->
       </nav>
+
+      
+        
