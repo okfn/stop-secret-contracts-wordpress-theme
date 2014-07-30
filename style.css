@@ -312,6 +312,12 @@ blockquote {
 .navbar > .container .navbar-nav.navbar-right > li:last-child {
   margin-right: 0;
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .navbar > .container .navbar-nav.navbar-right > li > a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
 .navbar > .container .navbar-nav.navbar-right a:hover,
 .navbar > .container .navbar-nav.navbar-right .navbar > .container a:focus {
   background-color: #434a52;

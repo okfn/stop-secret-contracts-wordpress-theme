@@ -383,6 +383,13 @@ blockquote {
         &:last-child {
           margin-right: 0;
         }
+        
+        & > a {
+          @media screen and (min-width: 768px) and (max-width: 992px) {
+            padding-left: 8px;
+            padding-right:8px;
+          }
+        }
       }
       
       a:hover,
