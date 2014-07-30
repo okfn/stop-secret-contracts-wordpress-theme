@@ -296,10 +296,17 @@ blockquote {
   background-color: transparent;
 }
 .navbar > .container .navbar-nav {
-  padding-bottom: 0;
+  padding-top: 25px;
+  padding-bottom: 5px;
   max-width: 50%;
   font-size: 15px;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .navbar > .container .navbar-nav {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 .navbar > .container .navbar-nav.navbar-right {
   margin-right: -20px;
