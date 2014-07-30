@@ -227,6 +227,7 @@ blockquote {
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-transform: none;
+  line-height: 1.2;
 }
 @media screen and (min-width: 768px) {
   .navbar + .banner h2 {
