@@ -32,7 +32,7 @@
             <h4 class="modal-title" id="myModalLabel">Thank you</h4>
           </div>
           <div class="modal-body">
-            <p>Your signature has been added to the list of petition signers.</p>
+            <p>Thank you for connecting. You're email address has been added to our newsletter list.</p>
             <p>If you'd like to get more involved in the campaign, let us know <a href="./?page=get-involved">here</a>.</p>
           </div>
           <div class="modal-footer">
