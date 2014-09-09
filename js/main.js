@@ -23,9 +23,12 @@ jQuery(document).ready(function ($) {
 
   //get Involved
 	if (modal === 'get-involved') {
-    $('html').addClass('involved');
+    $('#get-involved').modal({
+      show: true
+    })
+    
   }
-	$( ".get-involved .modal-content .getin" ).load( "get-involved.html #getinvolved" );
+	$( "#get-involved .getin" ).load( "form #getinvolved" );
 	
 	$(".get-involved-link").click(function( event ) {
 		event.preventDefault();

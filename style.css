@@ -566,14 +566,38 @@ blockquote {
 #okf-panel {
   border-color: #363636;
 }
-.involved,
-.signed {
-  overflow: hidden;
+/*
+ * Get Involved
+ */
+#get-involved.modal .required-message {
+  display: none;
 }
-.signed .modal.redirect,
-.involved .modal.get-involved {
+#get-involved.modal .ss-q-title {
+  font-weight: bold;
+}
+#get-involved.modal .ss-choices {
+  padding-left: 0;
+}
+#get-involved.modal .ss-choice-item {
   display: block;
-  overflow: auto;
+}
+#get-involved.modal .modal-content label {
+  margin-top: 6px;
+  display: block;
+  font-weight: normal;
+}
+#get-involved.modal .modal-content input[type="text"],
+#get-involved.modal .modal-content input[type="email"],
+#get-involved.modal .modal-content select,
+#get-involved.modal .modal-content textarea {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+#get-involved.modal .get-involved-page h2 {
+  padding-top: 20px;
+}
+#get-involved.modal #ss-submit {
+  margin-bottom: 20px;
 }
 /*Feed*/
 .feedEkList {

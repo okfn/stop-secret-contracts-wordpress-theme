@@ -673,14 +673,40 @@ blockquote {
 
 
 
-.involved,
-.signed {
-	overflow:hidden;
-}
-.signed .modal.redirect,
-.involved .modal.get-involved {
-	display:block;
-	overflow:auto;
+/*
+ * Get Involved
+ */
+#get-involved.modal {
+  .required-message {
+    display:none;
+  }
+  .ss-q-title {
+    font-weight:bold;
+  }
+  .ss-choices {
+    padding-left:0;
+  }
+  .ss-choice-item {
+    display:block;
+  }
+  .modal-content label {
+    margin-top:6px;
+    display:block;
+    font-weight:normal;
+  }
+  .modal-content input[type="text"],
+  .modal-content input[type="email"],
+  .modal-content select,
+  .modal-content textarea {
+    margin-top:3px;
+    margin-bottom:3px;
+  }
+  .get-involved-page h2 {
+    padding-top:20px;
+  }
+  #ss-submit {
+    margin-bottom:20px;
+  }
 }
 
 

@@ -40,6 +40,20 @@
         </div>
       </div>
     </div>
+    
+    <div class="modal fade" id="get-involved" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a class="close" href="./">&times;</a>
+            <h4 class="modal-title" id="myModalLabel">Get Involved</h4>
+          </div>
+          <div class="modal-body">
+            <div class="getin"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 				
 		<!--[if lt IE 7 ]>
   			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
