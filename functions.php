@@ -570,9 +570,8 @@ add_filter('show_admin_bar', '__return_false');
 add_action('admin_menu', 'sss_create_menu');
 function sss_create_menu() {
 
-	//create new top-level menu
-	$icon = get_template_directory_uri() . '/images/icon.png';
-	add_menu_page(__('Theme Options', 'stopsecretcontracts'), __('Theme Options', 'stopsecretcontracts'), 'administrator', 'stopsecretcontracts-theme-settings', 'sss_settings_page', ' dashicons-admin-generic');	
+//create new top-level menu
+add_menu_page(__('Theme Options', 'stopsecretcontracts'), __('Theme Options', 'stopsecretcontracts'), 'administrator', 'stopsecretcontracts-theme-settings', 'sss_settings_page', ' dashicons-admin-generic');	
 }
 
 //Create settings fields.
