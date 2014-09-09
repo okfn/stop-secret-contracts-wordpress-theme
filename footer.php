@@ -32,8 +32,7 @@
             <h4 class="modal-title" id="myModalLabel">Thank you</h4>
           </div>
           <div class="modal-body">
-            <p>Thank you for connecting. You're email address has been added to our newsletter list.</p>
-            <p>If you'd like to get more involved in the campaign, let us know <a href="./?page=get-involved">here</a>.</p>
+            <?php echo get_option('sss_thankyou_text'); ?>
           </div>
           <div class="modal-footer">
             Please share the campaign: <a href="http://www.facebook.com/share.php?u=http://stopsecretcontracts.org/"><i class="fa fa-facebook-square"></i></a> <a href="http://ctt.ec/6Gsm_"><i class="fa fa-twitter"></i></a> <a href="mailto:contact@stopsecretcontracts.org"><i class="fa fa-envelope"></i></a>

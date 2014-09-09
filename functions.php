@@ -562,4 +562,57 @@ add_action( 'wp_enqueue_scripts', 'theme_js' );
 //disable admin bar
 add_filter('show_admin_bar', '__return_false');
 
+
+
+/*********** Custom Theme Settings ************/
+
+//Create link to the menu page.
+add_action('admin_menu', 'sss_create_menu');
+function sss_create_menu() {
+
+	//create new top-level menu
+	$icon = get_template_directory_uri() . '/images/icon.png';
+	add_menu_page(__('Theme Options', 'stopsecretcontracts'), __('Theme Options', 'stopsecretcontracts'), 'administrator', 'stopsecretcontracts-theme-settings', 'sss_settings_page', ' dashicons-admin-generic');	
+}
+
+//Create settings fields.
+add_action( 'admin_init', 'register_ssssettings' );
+function register_ssssettings() {
+	register_setting( 'sss-settings-general', 'sss_thankyou_text' );
+}
+
+//Create the markup for the options page
+function sss_settings_page() {
+?>
+
+<div class="wrap">
+<h2><?php _e('Theme Options', 'stopsecretcontracts'); ?></h2>
+
+<form method="post" action="options.php">
+	
+	<?php if(isset( $_GET['settings-updated'])) { ?>
+	<div class="updated">
+        <p><?php _e('Settings updated successfully', $textdomain); ?></p>
+    </div>
+	<?php } ?>
+
+    <table class="form-table">
+		
+		<tr valign="top">
+			<th scope="row"><?php _e('Thankyou Text', 'stopsecretcontracts'); ?></th>
+			<td>
+				<textarea name="sss_thankyou_text" class="large-text code" rows="5"><?php echo get_option('sss_thankyou_text'); ?></textarea>
+				<p class="description"><?php _e('Text that appears in popup.', 'stopsecretcontracts'); ?></p>
+			</td>
+		</tr>
+		
+		<?php settings_fields( 'sss-settings-general' ); ?>
+		<?php do_settings_sections( 'sss-settings-general' ); ?>
+    </table>
+    
+    <?php submit_button(); ?>
+</form>
+</div>
+<?php }
+
 ?>
